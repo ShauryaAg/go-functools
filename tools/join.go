@@ -1,7 +1,7 @@
 package tools
 
 // Join the given array with the given separator
-func join[T any] (slice []T, separator string) string {
+func Join[T any] (slice []T, separator string) string {
 	var result string
 
 	for i, val := range slice {

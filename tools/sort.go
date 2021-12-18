@@ -1,7 +1,7 @@
 package tools
 
 // Sort an array
-func sort[T comparable] (slice []T, compareFn func(T, T) bool) []T {
+func Sort[T comparable] (slice []T, compareFn func(T, T) bool) []T {
 	for i := 0; i < len(slice)-1; i++ {
 		for j := i + 1; j < len(slice); j++ {
 			if compareFn(slice[i], slice[j]) {
@@ -14,6 +14,6 @@ func sort[T comparable] (slice []T, compareFn func(T, T) bool) []T {
 }
 
 // Default compare function for sort
-func defaultCompare[T comparable] (a, b T) bool {
+func DefaultCompare[T comparable] (a, b T) bool {
 	return a < b
 }
