@@ -6,6 +6,7 @@ Golang package containing **functools** using Go generics
 
 It contains the following methods:
 
+- **arrayEquals**: checks if two arrays are equal
 - **copyWithin**: copy a value from target to destination within the array
 - **every**: check if every element satisfies the given condition
 - **fill**: fill the given range with the given value
@@ -23,7 +24,7 @@ It contains the following methods:
 - **sort**: sort the array
 - **unshift**: add values in front of the array
 
-### Todo:
+## Todo:
 
 - [ ] Add tests
 - [ ] Add tools for `map`
