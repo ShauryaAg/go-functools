@@ -1,5 +1,7 @@
 # go-functools
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ShauryaAg/go-functools/Go)
+
 Golang package containing **functools** using Go generics
 
 `functools` is a set of functions for functional programming in Golang.
