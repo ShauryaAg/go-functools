@@ -1,11 +1,12 @@
 package tools
 
-func copyWithin[T any] (slice []T, value T, start int, end int) []T {
+// Replace slice[start:end] with slice[target]
+func copyWithin[T any] (slice []T, target int, start int, end int) []T {
 	start = start % len(slice)
 	end = end % len(slice)
 
 	for i := start; i < end; i++ {
-		slice[i] = value
+		slice[i] = slice[target]
 	}
 
 	return slice
