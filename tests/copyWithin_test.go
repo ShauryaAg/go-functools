@@ -30,14 +30,14 @@ var stringCopyWithinTests = []copyWithinTest[string] {
 func TestCopyWithin(t *testing.T) {
 	for idx, test := range intCopyWithinTests {
 		actual := tools.CopyWithin(test.slice, test.target, test.start, test.end)
-		if ArrayEquals(actual, test.expected) == false {
+		if tools.ArrayEquals(actual, test.expected) == false {
 			t.Errorf("%d. CopyWithin() returned %v, expected %v", idx+1, actual, test.expected)
 		}
 	}
 
 	for idx, test := range stringCopyWithinTests {
 		actual := tools.CopyWithin(test.slice, test.target, test.start, test.end)
-		if ArrayEquals(actual, test.expected) == false {
+		if tools.ArrayEquals(actual, test.expected) == false {
 			t.Errorf("%d. CopyWithin() returned %v, expected %v", idx+1, actual, test.expected)
 		}
 	}

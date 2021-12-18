@@ -1,5 +1,7 @@
-package tests
+package tools
 
+
+// Check if two array are equal
 func ArrayEquals[T comparable] (a []T, b []T) bool {
 	if len(a) != len(b) {
 		return false
