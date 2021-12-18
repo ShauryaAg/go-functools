@@ -1,5 +1,7 @@
 package tools
 
+import "fmt"
+
 // Join the given array with the given separator
 func Join[T any] (slice []T, separator string) string {
 	var result string

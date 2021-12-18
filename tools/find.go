@@ -7,5 +7,7 @@ func Find[T any] (slice []T, callback func(T) bool) T {
 			return val
 		}
 	}
-	return nil
+
+	// TODO: fix: should return nil
+	return slice[0];
 }
