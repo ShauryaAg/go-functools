@@ -19,5 +19,5 @@ func Sort[T any] (slice []T, compareFn func(T, T) bool) []T {
 
 // Default compare function for sort
 func DefaultCompare[T utils.Comparable[T]] (a, b T) bool {
-	return a.Compare(b)
+	return a.Compare(b) > 0
 }
