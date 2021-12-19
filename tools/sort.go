@@ -1,6 +1,8 @@
 package tools
 
 import (
+	"constraints"
+	
 	utils "tools/utils"
 )
 
@@ -17,7 +19,11 @@ func Sort[T any] (slice []T, compareFn func(T, T) bool) []T {
 	return slice
 }
 
+func DefaultCompare[T constraints.Ordered] (a, b T) bool {
+	return a > b
+}
+
 // Default compare function for sort
-func DefaultCompare[T utils.Comparable[T]] (a, b T) bool {
-	return a.Compare(b) > 0
+func DefaultCompareC[T utils.Comparable[T]] (a, b T) bool {
+	return a.Compare(b) < 0
 }
