@@ -1,7 +1,7 @@
 package tools
 
 import (
-	utils "tools/utils"
+	utils "github.com/ShauryaAg/go-functools/utils"
 )
 
 // Replace slice[target:target+length] with slice[start:end]

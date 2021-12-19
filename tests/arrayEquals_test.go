@@ -3,7 +3,7 @@ package tests
 import (
 	"testing"
 
-	tools "tools/tools"
+	tools "github.com/ShauryaAg/go-functools/tools"
 )
 
 type arrayEqualsTest[T any] struct {

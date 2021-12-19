@@ -2,8 +2,8 @@ package tools
 
 import (
 	"constraints"
-	
-	utils "tools/utils"
+
+	utils "github.com/ShauryaAg/go-functools/utils"
 )
 
 // Sort an array

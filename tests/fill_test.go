@@ -1,7 +1,7 @@
 package tests
 
 import ("testing"
-tools "tools/tools")
+tools "github.com/ShauryaAg/go-functools/tools")
 
 type fillTest[T any] struct {
 	slice []T

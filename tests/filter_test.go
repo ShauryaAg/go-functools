@@ -2,7 +2,7 @@ package tests
 
 import (
 	"testing"
-	tools "tools/tools"
+	tools "github.com/ShauryaAg/go-functools/tools"
 )
 
 type filterTest[T any] struct {
