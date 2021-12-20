@@ -9,9 +9,8 @@ type NumberOrString interface {
 		~float32 | ~float64 | ~complex64 | ~complex128 | ~string
 }
 
-
 // Comparable type
-// Should either be Ordered or 
+// Should either be Ordered or
 // a type that implements the Compare() method
 type Comparable[T any] interface {
 	constraints.Ordered
