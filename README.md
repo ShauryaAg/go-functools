@@ -25,9 +25,3 @@ It contains the following methods:
 - [`some`](tools/some.go): check if some element(s) of the array satisfies the condition
 - [`sort`](tools/sort.go): sort the array
 - [`unshift`](tools/unshift.go): add values in front of the array
-
-## Todo:
-
-- [ ] Add tests
-- [ ] Add tools for `map`
-- [ ] Add more efficient implementations
