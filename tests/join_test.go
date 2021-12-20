@@ -7,19 +7,19 @@ import (
 )
 
 type joinTest[T any] struct {
-	slice []T
+	slice     []T
 	separator string
-	expected string
+	expected  string
 }
 
-var intJoinTest = []joinTest[int] {
-	joinTest[int] {[]int{1, 2, 3, 4, 5}, ",", "1,2,3,4,5"},
-	joinTest[int] {[]int{1, 2, 3, 4, 5}, "", "12345"},
+var intJoinTest = []joinTest[int]{
+	joinTest[int]{[]int{1, 2, 3, 4, 5}, ",", "1,2,3,4,5"},
+	joinTest[int]{[]int{1, 2, 3, 4, 5}, "", "12345"},
 }
 
-var stringJoinTest = []joinTest[string] {
-	joinTest[string] {[]string{"a", "b", "c", "d", "e"}, ",", "a,b,c,d,e"},
-	joinTest[string] {[]string{"a", "b", "c", "d", "e"}, "", "abcde"},
+var stringJoinTest = []joinTest[string]{
+	joinTest[string]{[]string{"a", "b", "c", "d", "e"}, ",", "a,b,c,d,e"},
+	joinTest[string]{[]string{"a", "b", "c", "d", "e"}, "", "abcde"},
 }
 
 func TestJoin(t *testing.T) {

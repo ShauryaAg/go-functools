@@ -7,18 +7,18 @@ import (
 )
 
 type shiftTest[T any] struct {
-	slice []T
+	slice    []T
 	expected []T
 }
 
-var intShiftTests = []shiftTest[int] {
-	shiftTest[int] {[]int{1, 2, 3, 4, 5}, []int{2, 3, 4, 5}},
-	shiftTest[int] {[]int{1, 2, 3, 4, 5, 6}, []int{2, 3, 4, 5, 6}},
+var intShiftTests = []shiftTest[int]{
+	shiftTest[int]{[]int{1, 2, 3, 4, 5}, []int{2, 3, 4, 5}},
+	shiftTest[int]{[]int{1, 2, 3, 4, 5, 6}, []int{2, 3, 4, 5, 6}},
 }
 
-var stringShiftTests = []shiftTest[string] {
-	shiftTest[string] {[]string{"a", "b", "c", "d", "e"}, []string{"b", "c", "d", "e"}},
-	shiftTest[string] {[]string{"a", "b", "c", "d", "e", "f"}, []string{"b", "c", "d", "e", "f"}},
+var stringShiftTests = []shiftTest[string]{
+	shiftTest[string]{[]string{"a", "b", "c", "d", "e"}, []string{"b", "c", "d", "e"}},
+	shiftTest[string]{[]string{"a", "b", "c", "d", "e", "f"}, []string{"b", "c", "d", "e", "f"}},
 }
 
 func TestShift(t *testing.T) {

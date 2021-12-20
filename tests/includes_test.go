@@ -6,21 +6,21 @@ import (
 	tools "github.com/ShauryaAg/go-functools/tools"
 )
 
-type includesTest[T any]  struct {
-	slice []T
-	value T
+type includesTest[T any] struct {
+	slice    []T
+	value    T
 	expected bool
 }
 
-var intIncludesTest = []includesTest[int] {
-	includesTest[int] {[]int{1, 2, 3, 4, 5}, 2, true},
-	includesTest[int] {[]int{1, 2, 3, 4, 5}, 1, true},
-	includesTest[int] {[]int{1, 2, 3, 4, 5}, 0, false},
+var intIncludesTest = []includesTest[int]{
+	includesTest[int]{[]int{1, 2, 3, 4, 5}, 2, true},
+	includesTest[int]{[]int{1, 2, 3, 4, 5}, 1, true},
+	includesTest[int]{[]int{1, 2, 3, 4, 5}, 0, false},
 }
 
-var stringIncludesTest = []includesTest[string] {
-	includesTest[string] {[]string{"a", "b", "c", "d", "e"}, "c", true},
-	includesTest[string] {[]string{"a", "b", "c", "d", "e"}, "f", false},
+var stringIncludesTest = []includesTest[string]{
+	includesTest[string]{[]string{"a", "b", "c", "d", "e"}, "c", true},
+	includesTest[string]{[]string{"a", "b", "c", "d", "e"}, "f", false},
 }
 
 func TestIncludes(t *testing.T) {

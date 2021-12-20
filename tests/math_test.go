@@ -1,42 +1,42 @@
 package tests
 
 import (
-	"testing"
 	"math"
+	"testing"
 
 	utils "github.com/ShauryaAg/go-functools/utils"
 )
 
 type mathTest[T any] struct {
-	a T
-	b T
+	a        T
+	b        T
 	expected T
 }
 
-var intMinTest = []mathTest[int] {
-	mathTest[int] {1, 2, 1},
-	mathTest[int] {2, 1, 1},
-	mathTest[int] {1, 1, 1},
-	mathTest[int] {1, int(math.Inf(-1)), int(math.Inf(-1))},
+var intMinTest = []mathTest[int]{
+	mathTest[int]{1, 2, 1},
+	mathTest[int]{2, 1, 1},
+	mathTest[int]{1, 1, 1},
+	mathTest[int]{1, int(math.Inf(-1)), int(math.Inf(-1))},
 }
 
-var intMaxTest = []mathTest[uint64] {
-	mathTest[uint64] {1, 2, 2},
-	mathTest[uint64] {2, 1, 2},
-	mathTest[uint64] {1, 1, 1},
-	mathTest[uint64] {uint64(1), uint64(math.Inf(1)), uint64(math.Inf(1))},
+var intMaxTest = []mathTest[uint64]{
+	mathTest[uint64]{1, 2, 2},
+	mathTest[uint64]{2, 1, 2},
+	mathTest[uint64]{1, 1, 1},
+	mathTest[uint64]{uint64(1), uint64(math.Inf(1)), uint64(math.Inf(1))},
 }
 
-var stringMinTest = []mathTest[string] {
-	mathTest[string] {"a", "b", "a"},
-	mathTest[string] {"b", "a", "a"},
-	mathTest[string] {"a", "a", "a"},
+var stringMinTest = []mathTest[string]{
+	mathTest[string]{"a", "b", "a"},
+	mathTest[string]{"b", "a", "a"},
+	mathTest[string]{"a", "a", "a"},
 }
 
-var stringMaxTest = []mathTest[string] {
-	mathTest[string] {"a", "b", "b"},
-	mathTest[string] {"b", "a", "b"},
-	mathTest[string] {"a", "a", "a"},
+var stringMaxTest = []mathTest[string]{
+	mathTest[string]{"a", "b", "b"},
+	mathTest[string]{"b", "a", "b"},
+	mathTest[string]{"a", "a", "a"},
 }
 
 func TestMin(t *testing.T) {

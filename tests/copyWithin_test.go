@@ -6,25 +6,24 @@ import (
 	tools "github.com/ShauryaAg/go-functools/tools"
 )
 
-
 type copyWithinTest[T any] struct {
-	slice []T
-	target int
-	start int
-	end int
+	slice    []T
+	target   int
+	start    int
+	end      int
 	expected []T
 }
 
-var intCopyWithinTests = []copyWithinTest[int] {
-	copyWithinTest[int] {[]int{1, 2, 3, 4, 5}, 0, 0, 5, []int{1, 2, 3, 4, 5}},
-	copyWithinTest[int] {[]int{1, 2, 3, 4, 5}, 0, 1, 4, []int{2, 3, 4, 4, 5}},
-	copyWithinTest[int] {[]int{1, 2, 3, 4, 5}, 0, 2, 3, []int{3, 2, 3, 4, 5}},
+var intCopyWithinTests = []copyWithinTest[int]{
+	copyWithinTest[int]{[]int{1, 2, 3, 4, 5}, 0, 0, 5, []int{1, 2, 3, 4, 5}},
+	copyWithinTest[int]{[]int{1, 2, 3, 4, 5}, 0, 1, 4, []int{2, 3, 4, 4, 5}},
+	copyWithinTest[int]{[]int{1, 2, 3, 4, 5}, 0, 2, 3, []int{3, 2, 3, 4, 5}},
 }
 
-var stringCopyWithinTests = []copyWithinTest[string] {
-	copyWithinTest[string] {[]string{"a", "b", "c", "d", "e"}, 0, 0, 5, []string{"a", "b", "c", "d", "e"}},
-	copyWithinTest[string] {[]string{"a", "b", "c", "d", "e"}, 0, 1, 4, []string{"b", "c", "d", "d", "e"}},
-	copyWithinTest[string] {[]string{"a", "b", "c", "d", "e"}, 0, 2, 3, []string{"c", "b", "c", "d", "e"}},
+var stringCopyWithinTests = []copyWithinTest[string]{
+	copyWithinTest[string]{[]string{"a", "b", "c", "d", "e"}, 0, 0, 5, []string{"a", "b", "c", "d", "e"}},
+	copyWithinTest[string]{[]string{"a", "b", "c", "d", "e"}, 0, 1, 4, []string{"b", "c", "d", "d", "e"}},
+	copyWithinTest[string]{[]string{"a", "b", "c", "d", "e"}, 0, 2, 3, []string{"c", "b", "c", "d", "e"}},
 }
 
 func TestCopyWithin(t *testing.T) {
@@ -42,4 +41,3 @@ func TestCopyWithin(t *testing.T) {
 		}
 	}
 }
-

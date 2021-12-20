@@ -1,25 +1,25 @@
 package tests
 
 import (
-	"testing"
 	tools "github.com/ShauryaAg/go-functools/tools"
+	"testing"
 )
 
 type filterTest[T any] struct {
-	slice []T
+	slice    []T
 	callback func(T) bool
 	expected []T
 }
 
-var intFilterTest = []filterTest[int] {
-	filterTest[int] {[]int{1, 2, 3, 4, 5}, func(val int) bool { return val > 2 }, []int{3, 4, 5}},
-	filterTest[int] {[]int{1, 2, 3, 4, 5}, func(val int) bool { return val < 2 }, []int{1}},
-	filterTest[int] {[]int{1, 2, 3, 4, 5}, func(val int) bool { return val == 2 }, []int{2}},
+var intFilterTest = []filterTest[int]{
+	filterTest[int]{[]int{1, 2, 3, 4, 5}, func(val int) bool { return val > 2 }, []int{3, 4, 5}},
+	filterTest[int]{[]int{1, 2, 3, 4, 5}, func(val int) bool { return val < 2 }, []int{1}},
+	filterTest[int]{[]int{1, 2, 3, 4, 5}, func(val int) bool { return val == 2 }, []int{2}},
 }
 
-var stringFilterTest = []filterTest[string] {
-	filterTest[string] {[]string{"a", "b", "c", "d", "e"}, func(val string) bool { return val == "c" }, []string{"c"}},
-	filterTest[string] {[]string{"a", "b", "c", "d", "e"}, func(val string) bool { return val == "f" }, []string{}},
+var stringFilterTest = []filterTest[string]{
+	filterTest[string]{[]string{"a", "b", "c", "d", "e"}, func(val string) bool { return val == "c" }, []string{"c"}},
+	filterTest[string]{[]string{"a", "b", "c", "d", "e"}, func(val string) bool { return val == "f" }, []string{}},
 }
 
 func TestFilter(t *testing.T) {

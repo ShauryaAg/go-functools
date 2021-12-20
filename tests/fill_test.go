@@ -1,26 +1,28 @@
 package tests
 
-import ("testing"
-tools "github.com/ShauryaAg/go-functools/tools")
+import (
+	tools "github.com/ShauryaAg/go-functools/tools"
+	"testing"
+)
 
 type fillTest[T any] struct {
-	slice []T
-	value T
-	start int
-	end int
+	slice    []T
+	value    T
+	start    int
+	end      int
 	expected []T
 }
 
-var intFillTests = []fillTest[int] {
-	fillTest[int] {[]int{1, 2, 3, 4, 5}, 0, 0, 5, []int{0, 0, 0, 0, 0}},
-	fillTest[int] {[]int{1, 2, 3, 4, 5}, 0, 1, 4, []int{1, 0, 0, 0, 5}},
-	fillTest[int] {[]int{1, 2, 3, 4, 5}, 0, 2, 3, []int{1, 2, 0, 4, 5}},
+var intFillTests = []fillTest[int]{
+	fillTest[int]{[]int{1, 2, 3, 4, 5}, 0, 0, 5, []int{0, 0, 0, 0, 0}},
+	fillTest[int]{[]int{1, 2, 3, 4, 5}, 0, 1, 4, []int{1, 0, 0, 0, 5}},
+	fillTest[int]{[]int{1, 2, 3, 4, 5}, 0, 2, 3, []int{1, 2, 0, 4, 5}},
 }
 
-var stringFillTests = []fillTest[string] {
-	fillTest[string] {[]string{"a", "b", "c", "d", "e"}, "", 0, 5, []string{"", "", "", "", ""}},
-	fillTest[string] {[]string{"a", "b", "c", "d", "e"}, "", 1, 4, []string{"a", "", "", "", "e"}},
-	fillTest[string] {[]string{"a", "b", "c", "d", "e"}, "", 2, 3, []string{"a", "b", "", "d", "e"}},
+var stringFillTests = []fillTest[string]{
+	fillTest[string]{[]string{"a", "b", "c", "d", "e"}, "", 0, 5, []string{"", "", "", "", ""}},
+	fillTest[string]{[]string{"a", "b", "c", "d", "e"}, "", 1, 4, []string{"a", "", "", "", "e"}},
+	fillTest[string]{[]string{"a", "b", "c", "d", "e"}, "", 2, 3, []string{"a", "b", "", "d", "e"}},
 }
 
 func TestFill(t *testing.T) {

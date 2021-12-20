@@ -5,7 +5,7 @@ import (
 )
 
 // Replace slice[target:target+length] with slice[start:end]
-func CopyWithin[T any] (slice []T, target int, start int, end int) []T {
+func CopyWithin[T any](slice []T, target int, start int, end int) []T {
 	len := len(slice)
 
 	to := utils.Min(target, len)

@@ -7,21 +7,21 @@ import (
 )
 
 type unshiftTest[T any] struct {
-	slice []T
-	elems []T
+	slice    []T
+	elems    []T
 	expected []T
 }
 
-var intUnshiftTests = []unshiftTest[int] {
-	unshiftTest[int] {[]int{1, 2, 3}, []int{4, 5}, []int{4, 5, 1, 2, 3}},
-	unshiftTest[int] {[]int{1, 2, 3}, []int{}, []int{1, 2, 3}},
-	unshiftTest[int] {[]int{}, []int{4, 5}, []int{4, 5}},
+var intUnshiftTests = []unshiftTest[int]{
+	unshiftTest[int]{[]int{1, 2, 3}, []int{4, 5}, []int{4, 5, 1, 2, 3}},
+	unshiftTest[int]{[]int{1, 2, 3}, []int{}, []int{1, 2, 3}},
+	unshiftTest[int]{[]int{}, []int{4, 5}, []int{4, 5}},
 }
 
-var stringUnshiftTests = []unshiftTest[string] {
-	unshiftTest[string] {[]string{"a", "b", "c"}, []string{"d", "e"}, []string{"d", "e", "a", "b", "c"}},
-	unshiftTest[string] {[]string{"a", "b", "c"}, []string{}, []string{"a", "b", "c"}},
-	unshiftTest[string] {[]string{}, []string{"d", "e"}, []string{"d", "e"}},
+var stringUnshiftTests = []unshiftTest[string]{
+	unshiftTest[string]{[]string{"a", "b", "c"}, []string{"d", "e"}, []string{"d", "e", "a", "b", "c"}},
+	unshiftTest[string]{[]string{"a", "b", "c"}, []string{}, []string{"a", "b", "c"}},
+	unshiftTest[string]{[]string{}, []string{"d", "e"}, []string{"d", "e"}},
 }
 
 func TestUnshift(t *testing.T) {

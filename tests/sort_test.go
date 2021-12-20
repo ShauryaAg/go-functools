@@ -7,21 +7,21 @@ import (
 )
 
 type sortTest[T any] struct {
-	slice []T
+	slice     []T
 	compareFn func(T, T) bool
-	expected []T
+	expected  []T
 }
 
-var intSortTests = []sortTest[int] {
-	sortTest[int] {[]int{1, 3, 4, 5, 8, 10, 2}, tools.DefaultCompare[int], []int{1, 2, 3, 4, 5, 8, 10}},
-	sortTest[int] {[]int{1, 3, 4, 5, 8, 10, 2}, func(a, b int) bool { return a > b }, []int{1, 2, 3, 4, 5, 8, 10}},
-	sortTest[int] {[]int{1, 3, 4, 5, 8, 10, 2}, func(a, b int) bool { return a < b }, []int{10, 8, 5, 4, 3, 2, 1}},
+var intSortTests = []sortTest[int]{
+	sortTest[int]{[]int{1, 3, 4, 5, 8, 10, 2}, tools.DefaultCompare[int], []int{1, 2, 3, 4, 5, 8, 10}},
+	sortTest[int]{[]int{1, 3, 4, 5, 8, 10, 2}, func(a, b int) bool { return a > b }, []int{1, 2, 3, 4, 5, 8, 10}},
+	sortTest[int]{[]int{1, 3, 4, 5, 8, 10, 2}, func(a, b int) bool { return a < b }, []int{10, 8, 5, 4, 3, 2, 1}},
 }
 
-var stringSortTests = []sortTest[string] {
-	sortTest[string] {[]string{"a", "c", "d", "e", "g", "k", "b"}, tools.DefaultCompare[string], []string{"a", "b", "c", "d", "e", "g", "k"}},
-	sortTest[string] {[]string{"a", "c", "d", "e", "g", "k", "b"}, func(a, b string) bool { return a > b }, []string{"a", "b", "c", "d", "e", "g", "k"}},
-	sortTest[string] {[]string{"a", "c", "d", "e", "g", "k", "b"}, func(a, b string) bool { return a < b }, []string{"k", "g", "e", "d", "c", "b", "a"}},
+var stringSortTests = []sortTest[string]{
+	sortTest[string]{[]string{"a", "c", "d", "e", "g", "k", "b"}, tools.DefaultCompare[string], []string{"a", "b", "c", "d", "e", "g", "k"}},
+	sortTest[string]{[]string{"a", "c", "d", "e", "g", "k", "b"}, func(a, b string) bool { return a > b }, []string{"a", "b", "c", "d", "e", "g", "k"}},
+	sortTest[string]{[]string{"a", "c", "d", "e", "g", "k", "b"}, func(a, b string) bool { return a < b }, []string{"k", "g", "e", "d", "c", "b", "a"}},
 }
 
 func TestSort(t *testing.T) {

@@ -1,7 +1,7 @@
-package tools 
+package tools
 
 // Find the first element in an array that satisfies the given condition.
-func Find[T any] (slice []T, callback func(T) bool) T {	
+func Find[T any](slice []T, callback func(T) bool) T {
 	for _, val := range slice {
 		if callback(val) {
 			return val
@@ -9,5 +9,5 @@ func Find[T any] (slice []T, callback func(T) bool) T {
 	}
 
 	// TODO: fix: should return nil
-	return slice[0];
+	return slice[0]
 }
