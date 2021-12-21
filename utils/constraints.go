@@ -10,13 +10,9 @@ type NumberOrString interface {
 }
 
 // Comparable type
+// Should either be Ordered or
 // a type that implements the Compare() method
 type Comparable[T any] interface {
+	constraints.Ordered
 	Compare(T) int // return 1 if a > b, 0 if a == b, -1 if a < b
-}
-
-// Comparable or Ordered type
-// a type that either implements the Comparable or Ordered interface
-type ComparableOrOrdered[T any] interface {
-	Comparable[T] | constraints.Ordered
 }
