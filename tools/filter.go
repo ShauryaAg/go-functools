@@ -1,6 +1,7 @@
 package tools
 
-// Find all the elements in an array that satisfy the given condition.
+// Filter finds all the elements in the 
+// 'slice' that satisfy the 'callback' function.
 func Filter[T any](slice []T, callback func(T) bool) []T {
 	var result []T
 	for _, val := range slice {

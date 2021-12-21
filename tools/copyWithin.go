@@ -4,7 +4,7 @@ import (
 	utils "github.com/ShauryaAg/go-functools/utils"
 )
 
-// Replace slice[target:target+length] with slice[start:end]
+// CopyWithin copies slice[start:end] to slice[target:target+(start-end)]
 func CopyWithin[T any](slice []T, target int, start int, end int) []T {
 	len := len(slice)
 
