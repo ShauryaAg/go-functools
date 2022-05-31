@@ -9,6 +9,7 @@ func Find[T any](slice []T, callback func(T) bool) T {
 		}
 	}
 
-	// TODO: fix: should return nil
-	return slice[0]
+	// Initialise nil value of type T
+	var nilvalue T
+	return nilvalue
 }
