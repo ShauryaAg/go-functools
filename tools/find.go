@@ -10,6 +10,6 @@ func Find[T any](slice []T, callback func(T) bool) T {
 	}
 
 	// Initialise nil value of type T
-	var nilvalue T
-	return nilvalue
+	var null T
+	return null
 }
