@@ -1,6 +1,6 @@
 package utils
 
-import "constraints"
+import "golang.org/x/exp/constraints"
 
 // Min returns the minimum value of the two values.
 //

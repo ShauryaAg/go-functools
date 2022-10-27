@@ -1,7 +1,7 @@
 package tools
 
 import (
-	"constraints"
+	"golang.org/x/exp/constraints"
 
 	utils "github.com/ShauryaAg/go-functools/utils"
 )
@@ -26,7 +26,7 @@ func DefaultCompare[T constraints.Ordered](a, b T) bool {
 
 // Default compare function for Sort[T] with Comparable type constraint.
 //
-// Comparable type constraint is a custom constraint that checks the type 
+// Comparable type constraint is a custom constraint that checks the type
 // to contain a Compare() method.
 func DefaultCompareC[T utils.Comparable[T]](a, b T) bool {
 	return a.Compare(b) < 0
